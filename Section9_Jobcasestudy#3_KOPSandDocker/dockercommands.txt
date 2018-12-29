@@ -1,0 +1,7 @@
+docker pull ubuntu
+docker run
+docker run -it -d ubuntu
+docker ps
+docker rm
+docker images
+docker stop
