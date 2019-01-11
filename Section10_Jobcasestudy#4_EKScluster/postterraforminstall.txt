@@ -1,0 +1,30 @@
+Once the cluster is setup with Terraform you need to run below commands to configure cluster
+
+NOTE : These steps are explained in Video 93
+
+Establish communication between kubectl and cluster
+================================================
+1) run terraform output config
+
+
+2) update ~/.kube/config to add output from #1
+
+Validate cluster status by running below commands :
+
+kubectl get svc
+
+kubectl get nodes
+
+Attachment between kubernetes master and worker nodes :
+======================================================
+
+terraform output config_map_aws_auth > config-map.yaml
+
+
+Validate cluster status by running below commands :
+
+kubectl get svc
+
+kubectl get nodes
+
+
