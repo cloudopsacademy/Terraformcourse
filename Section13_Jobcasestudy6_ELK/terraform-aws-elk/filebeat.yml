@@ -1,0 +1,7 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /var/log/syslog  
+
+output.logstash:
+  hosts: ["127.0.0.1:5043"]
