@@ -1,22 +1,12 @@
 resource "aws_instance" "firstdemo" {
+  ami = var.amitype
 
-ami = "${var.amitype}"
+  security_groups = var.sgs
 
-security_groups = "${var.sgs}"
+  instance_type = "t2.micro"
 
-instance_type = "t2.micro"
-
-
-tags {
-
-Name = "demoinstance"
-
+  tags = {
+    Name = "demoinstance"
+  }
 }
-
-}
-
-
-
-
-
 
