@@ -1,7 +1,7 @@
 resource "aws_instance" "firstdemo" {
   ami = var.amitype
 
-  security_groups = var.sgs
+  vpc_security_group_ids = var.sgs
 
   instance_type = "t2.micro"
 
