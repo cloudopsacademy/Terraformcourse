@@ -1,41 +1,20 @@
 variable "amitype" {
-
-default = "ami-922914f7"
-
+  default = "ami-922914f7"
 }
 
-variable "env" {}
-
-
+variable "env" {
+}
 
 variable "region" {
-
-default = "us-east-2"
-
+  default = "us-east-2"
 }
-
-
 
 variable "instance_type" {
+  type = map(string)
 
-
-
-type = "map"
-
-
-
-default = {
-
-
-
-dev = "t2.micro"
-
-
-
-test = "t2.medium"
-
-
-
+  default = {
+    dev  = "t2.micro"
+    test = "t2.medium"
+  }
 }
 
-}

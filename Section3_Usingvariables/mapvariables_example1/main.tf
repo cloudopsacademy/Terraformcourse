@@ -1,15 +1,10 @@
 resource "aws_instance" "firstdemo" {
+  ami = var.amitype
 
-ami = "${var.amitype}"
+  instance_type = var.instance_type[var.env]
 
-instance_type="${lookup(var.instance_type,var.env)}"
-
-tags {
-
+  tags = {
     Name = "demoinstance"
-
-   }
-
+  }
 }
-
 
