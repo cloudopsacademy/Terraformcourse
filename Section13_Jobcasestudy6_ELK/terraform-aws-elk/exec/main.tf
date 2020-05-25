@@ -1,6 +1,7 @@
 module "elk" {
-source = "../"
+  source = "../"
 
-  key = "newtest"
-  private_key = "${file("/tmp/newtest.pem")}"
+  key         = "newtest"
+  private_key = file("/tmp/newtest.pem")
 }
+
